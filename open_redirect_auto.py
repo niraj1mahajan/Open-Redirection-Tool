@@ -21,7 +21,7 @@ with open("redirection.txt", "w") as f_out:
     for string in strings:
         for domain in domains:
             # Make the request to the combined URL
-            url = f"{domain}/{string}"
+            url = f"http://{domain}/{string}"
             response = requests.get(url, allow_redirects=False)
 
             # Check if the request was redirected
